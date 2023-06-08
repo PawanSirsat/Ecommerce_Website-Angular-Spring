@@ -11,11 +11,12 @@
 
 #Cart
 ![image](https://github.com/PawanSirsat/Ecommerce-FrontEnd-Angular/assets/48860105/7de18f5a-cf14-4d75-803f-95d3586d8469)
-![image](https://github.com/PawanSirsat/Ecommerce-FrontEnd-Angular/assets/48860105/753b589c-0e0a-4227-99f0-a5fae98ec949)
-![image](https://github.com/PawanSirsat/Ecommerce-FrontEnd-Angular/assets/48860105/53ccc4d5-d77d-4c62-b6df-6bce2d03f26d)
+![image](https://github.com/PawanSirsat/Ecommerce-FrontEnd-Angular/assets/48860105/af27c586-82b1-4b35-ab13-b6f11bccc1f6)
 
 #Payment
-![image](https://github.com/PawanSirsat/Ecommerce-FrontEnd-Angular/assets/48860105/7e340750-f21e-4d6b-bf9b-c7e5b7511979)
+
+![image](https://github.com/PawanSirsat/Ecommerce-FrontEnd-Angular/assets/48860105/5c6ad637-f3ee-4167-9383-b4efa54aeece)
+
 
 #successful
 ![Done](https://github.com/PawanSirsat/Ecommerce-FrontEnd-Angular/assets/48860105/763799cc-4cf7-4458-ac79-944d8e6a6ca7)
