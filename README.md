@@ -1,6 +1,6 @@
 # WelcomePage
 ![image](https://github.com/PawanSirsat/Ecommerce-FrontEnd-Angular/assets/48860105/1cfb4ada-1a54-45d3-8c2f-e5d0dc5b59db)
-![image](https://github.com/PawanSirsat/Ecommerce-FrontEnd-Angular/assets/48860105/1a0ce95c-ca43-42f1-9378-92921feb0a01)
+![image](https://github.com/PawanSirsat/Ecommerce-FrontEnd-Angular/assets/48860105/68845fa5-bd2e-4ea1-bd91-4677f0772cd3)
 
 
 #SignIn
