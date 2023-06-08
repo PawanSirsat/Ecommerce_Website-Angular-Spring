@@ -1,0 +1,154 @@
+<div class="container" >
+    <div class="container-fluid" style="margin-top: 90px;">
+        <nav class="navbar navbar-light bg-light">
+            <div class="container">
+              <form class="d-flex">
+                <br>
+                <mat-icon>search</mat-icon>
+                <br>
+        
+                <input class="form-control me-lg-5"  type="text" name="name" [(ngModel)]="productFilter.name" 
+                placeholder="Enter Name to Search 1" aria-label="Search">
+        
+              </form>
+            </div>
+          </nav>
+
+        <!-- <div>
+            <h1>Angular</h1>
+            <img src="{{imgurl}}">
+        </div> -->
+
+        <div class="grid-container">
+
+        <div class="row"  *ngFor="let product of products | filterBy : productFilter">
+            <!-- Uses row in class if you want raw -->
+        
+                <div class="col-md-4 p-5"  >
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img class="card-img-top" src="{{product.url}}">                       
+                         <ul class="list-inline text-center member-icons animate">
+                            <li class="list-inline-item">
+                                <a routerLink="/shop/products/{{ product.id }}" class="btn btn-primary">Buy</a>
+                            </li>
+                            <li class="list-inline-item">
+                                    <button 
+                                        *ngIf="!isProductInCart" 
+                                        class="btn btn-success" 
+                                        [disabled]="!user" 
+                                        (click)="addToCart(id)"
+                                    >Add to cart</button>
+                                    <button *ngIf="isProductInCart" class="btn btn-secondary" disabled>In cart</button>
+                            
+                              
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                <div class="col-md-6" >  
+                        <h2>{{product.name}}</h2>
+                        <h3>{{product.description}}</h3>
+                        <ul>
+                            <li>{{product.brand}}</li>
+                            <li>Type : {{product.type}} </li>
+                            <li>{{product.hdd}} GB HDD</li>
+                            <li>Microsoft Office & Student 2021</li>
+                            <li>Screen Size : {{product.screen}} inches</li>
+                            <li>{{product.type}}</li>
+                            <li>2 Years Warranty</li>
+                          </ul>  
+                          
+                        
+                   </div>
+                   <div class="col-md-2">
+                    <h2>{{product.price | currency:"₹"}}</h2>
+                    <h5>free Delivery</h5>
+                    <h4>Upto 20% off on Exchange</h4>
+                    <div class="form-text text" style="color:green " >
+                       <b> Bank Offer</b>
+                    </div>
+                   </div>
+   <hr>
+        </div>
+        
+    </div>
+    </div>
+    
+</div>
+
+
+
+
+<!-- <div style="margin-top: 5rem;">  
+
+<div class="card"  class="shadow-lg-4 col-sm-4 p-3">
+
+<div class="card" *ngFor="let product of products; let i = index" >
+    <div class="card-img-wrapper">
+        <div class="product-img-container" [style.backgroundImage]="'url(' + product.imageUrl + ')'"></div>
+        <ul class="list-inline text-center member-icons animate">
+            <li class="list-inline-item">
+                <a routerLink="/shop/products/{{ product.id }}" class="btn btn-primary">Buy</a>
+                 <button class="btn btn-primary">Buy</button>
+            </li>
+            <div class="list-inline-item">
+                <button 
+                *ngIf="!isProductInCart" 
+                class="btn btn-success" 
+                (click)="addToCart()"
+            >Add to cart</button>
+            <button *ngIf="isProductInCart" class="btn btn-secondary" disabled>In cart</button>
+                 <button class="btn btn-primary"><i class="fa-solid fa-cart-arrow-down"></i> Add to cart</button> 
+            </div>
+        </ul>
+    </div>
+    <div class="card-body p-2">
+        <h2>{{product.Name}}</h2>
+         <h3>{{product.Type}}</h3>
+        <h3> {{ product.price | currency:"₹" }}</h3>
+    </div>
+</div>
+</div>
+</div> -->
+
+
+<!-- 
+<div style="margin-top: 5rem;">
+    <style>
+        .product-img-container {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url("../../../assets/static/images/product-placeholder.png");
+            width: 100%;
+            height: 250px;
+         }
+    </style>
+    <h1 class="mx-auto text-center" style="margin-bottom: 6rem;">Our Products</h1>
+     <mat-slider aria-label="unit(s)"></mat-slider>
+
+    <div class="d-flex" style="justify-content: center; flex-wrap: wrap;">
+        <div *ngFor="let product of products; let i = index">
+            <div 
+                style="width: 300px;"
+                class="mx-5 my-3"
+                *ngIf="product.name.toLowerCase().includes(term.toLowerCase())"
+            >
+                <h6 
+                    style="background-color: #fff5; border-radius: 0 10px 0 0;" 
+                    class="m-0 py-2 px-2"
+                >{{ product.name }}</h6>
+                <div class="product-img-container" [style.backgroundImage]="'url(' + product.imageUrl + ')'"></div>
+                <div 
+                    style="background-color: #fff1; justify-content: space-between; align-items: center;" 
+                    class="p-3 d-flex"
+                >
+                    <h3> {{ product.price | currency:"₹" }}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div> -->

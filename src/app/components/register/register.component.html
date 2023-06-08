@@ -1,0 +1,208 @@
+<!-- <div class="px-5 col-12" style="margin-top: 5rem;">
+    <h1 class="mx-auto text-center mb-5">Register</h1>
+    <form class="col-7 mx-auto mt-5" action="" (submit)="register()">
+        <div class="d-flex col-12 my-3">
+            <input 
+                type="text" 
+                placeholder="Username" 
+                name="username" 
+                id="username" 
+                style="flex: 1; border: 1px solid #fffa;" 
+                class="mx-3 bg-transparent rounded p-2 text-light"
+                [(ngModel)]="username"
+            />
+            <input 
+                type="text" 
+                placeholder="Email" 
+                name="email" 
+                id="email" 
+                style="flex: 2; border: 1px solid #fffa;" 
+                class="mx-3 bg-transparent rounded p-2 text-light" 
+                [(ngModel)]="email"
+            />
+        </div>
+        <div class="d-flex col-12 my-3">
+            <input 
+                type="password" 
+                placeholder="Password" 
+                name="password" 
+                id="password" 
+                style="flex: 1; border: 1px solid #fffa;" 
+                class="mx-3 bg-transparent rounded p-2 text-light"
+                [(ngModel)]="password"
+            />
+            <input 
+                type="password" 
+                placeholder="Confirm password" 
+                name="confirmPassword" 
+                id="confirmPassword" 
+                style="flex: 1; border: 1px solid #fffa;" 
+                class="mx-3 bg-transparent rounded p-2 text-light" 
+                [(ngModel)]="passwordConfirm"
+            />
+        </div>
+        <div class="d-flex col-12 my-3">
+            <input 
+                type="text" 
+                placeholder="Address" 
+                name="address" 
+                id="address" 
+                style="flex: 4; border: 1px solid #fffa;" 
+                class="mx-3 bg-transparent rounded p-2 text-light"
+                [(ngModel)]="address"
+            />
+            <input 
+                type="text" 
+                placeholder="Phone" 
+                name="phone" 
+                id="phone" 
+                style="flex: 2; border: 1px solid #fffa;" 
+                class="mx-3 bg-transparent rounded p-2 text-light" 
+                [(ngModel)]="phone"
+            />
+        </div>
+        <input 
+            type="text" 
+            placeholder="Name" 
+            name="name" 
+            id="name" 
+            style="border: 1px solid #fffa;" 
+            class="mx-3 bg-transparent rounded p-2 col-4 d-block text-light" 
+            [(ngModel)]="name"
+        />
+        <input 
+            type="submit"
+            value="Register" 
+            style="border: 1px solid #fffa;" 
+            class="mx-3 mt-5 rounded p-2 col-2 d-block btn btn-primary" 
+        />
+        <h4 
+            *ngIf="error"
+            style="text-align: center;" 
+            class="alert-danger p-2 m-5 rounded"
+        >{{error}}</h4>
+    </form>
+</div> -->
+
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card border-0 shadow rounded-3 my-5">
+          <div class="card-body p-4 p-sm-5">
+            <h5 class="card-title text-center mb-5 fw-light fs-5">Sign Up</h5>
+            <form action="" [formGroup]="RequiredForm" (submit)="register()">
+
+              <div class="row ">
+                <div class="form-floating col-sm-6 " >
+                    <input type="text"
+                     class="form-control" id="username" 
+                     placeholder="User ID" name="username" formControlName="namev"
+                     [(ngModel)]="username"  
+                     >          
+                    <label for="floatingInput">&nbsp;&nbsp;&nbsp;User ID</label>  
+                    <div class="form-text text-danger" *ngIf="namev.invalid && namev.touched">
+                      UserId is Invalid (min 5 Char)
+                     </div>
+                 </div>
+
+                 <div class="form-floating col-sm-6 ">
+                  <input type="text"
+                     class="form-control" id="user" 
+                     placeholder="Full Name" name="name"  formControlName="fullnamev"
+                     >          
+                    <label for="floatingInput">&nbsp;&nbsp;&nbsp;Full Name</label>  
+                    <div class="form-text text-danger" *ngIf="fullnamev.invalid && fullnamev.touched">
+                      Invalid (Must be Characters) 
+                     </div>
+                 </div>
+
+
+              </div>
+               <br>
+
+
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control"
+                 id="email" placeholder="name@example.com"
+                  name="email"  formControlName="emailv" 
+                  [(ngModel)]="email">
+                <label for="floatingInput">Email address</label>
+                <div class="form-text text-danger" *ngIf="emailv.invalid && emailv.touched">
+                  Email is not Invalid 
+                 </div>
+              </div>
+
+
+              <div class="form-floating mb-3">
+                <input type="text" 
+                 class="form-control" id="phone"
+                 placeholder="Mobile Number" name="phone" formControlName="phonev"
+                 [(ngModel)]="phone"
+                >
+                <label for="floatingPassword">Mobile</label> 
+                <div class="form-text text-danger" *ngIf="phonev.invalid && phonev.touched">
+                  Phone No. is Invalid (min 10 Digit)
+                 </div>
+          
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control"
+                 id="address" placeholder="address " 
+                 name="address" 
+                 [(ngModel)]="address" formControlName="addressv"
+                >
+                <label for="floatingPassword">Address</label> 
+                <div class="form-text text-danger" *ngIf="addressv.invalid && addressv.touched">
+                  Address min length 15
+                 </div>
+              </div>
+
+
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" 
+                id="password" placeholder="Password" formControlName="passwordv"
+                 name="password"
+                 [(ngModel)]="password" >
+                <label for="floatingPassword">Password</label>
+                <div class="form-text text-danger" *ngIf="passwordv.invalid && passwordv.touched">
+                 Invalid (Password min 7)
+                 </div>
+              </div>
+
+
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control"
+                 id="passwordConfirm" placeholder="passwordConfirm" formControlName="cpasswordv"
+                  name="passwordConfirm" 
+                  [(ngModel)]="passwordConfirm"
+                >
+                <label for="floatingPassword">Confirm Password</label>
+                <div class="form-text text-danger" [class.d-none] = "(cpasswordv.value == passwordv.value ) && (cpasswordv.untouched || cpasswordv.dirty)">
+                  Password & Confirm Password must be same
+                </div>
+               </div>
+       
+               <small class="text-danger"
+               *ngIf="error">{{error}}</small>
+              <div class="d-grid">              
+                  <button class="btn btn-primary btn-login text-uppercase fw-bold"  type="submit" [disabled]="RequiredForm.invalid"
+                  value="Register" >Register</button>
+              </div>
+              
+            </form>
+
+              <hr class="my-2">
+              <div class="d-grid">
+                <button class="btn btn-dark btn-login text-uppercase fw-bold nav-link" type="submit" [routerLink]="['/login']"
+                 routerLinkActive="active" > Already Register ? Login</button>
+              </div>
+
+              <hr class="my-4">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

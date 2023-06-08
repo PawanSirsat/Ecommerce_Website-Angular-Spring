@@ -1,0 +1,86 @@
+<div class="mx-5" style="margin-top: 5rem;">
+    <style>
+        .form-input {
+            background-color: transparent;
+            outline: none;
+            border: none;
+            color: white;
+        }
+
+        .form-input:focus {
+            font-weight: bold!important;
+            color: #198754!important;
+        }
+    </style>
+    <div *ngIf="!editMode">
+        <h1>Name : {{ user.username }}</h1>
+        <h4>ID : {{user.id}}</h4>
+        <h4 class="text-muted">Email :  &#xb7; {{ user.email }}</h4>
+        <div class="d-flex" style="align-items: baseline;">
+            <fa-icon [icon]="marker" style="margin-right: 1rem;" size="1x"></fa-icon>
+            <h4>{{ user.address }}</h4>
+        </div>
+        <div class="d-flex" style="align-items: baseline;">
+            <fa-icon [icon]="phoneIcon" style="margin-right: 1rem;" size="1x"></fa-icon>
+            <h4>+{{ user.phone }}</h4>
+        </div>
+        <h4>{{ user.cartItems.length }} items in cart</h4>
+        <div class="mt-5">
+            <button class="btn btn-primary" (click)="editMode = true" style="margin-right: 0.6rem;">Edit</button>
+            <button class="btn btn-danger mx-2" (click)="deleteUser()">Delete</button>
+            <button class="btn btn-info mx-2" (click)="logOut()">Log out</button>
+        </div>
+    </div>
+    
+    <div *ngIf="editMode">
+        <h1 class="display-1" style="font-size: 20px; font-weight: bold;">Edit Profile</h1>
+        <span class="text-muted" style="font-size: 20px; font-weight: bold;">Email : &#xb7; </span>
+        <input 
+            type="text" 
+            class="form-input" 
+            style="font-size: 20px; font-weight: 500; color: Black;"
+            [(ngModel)]="name"
+            autofocus
+        >
+        <div>
+           
+            <span class="text-muted" style="font-size: 20px; font-weight: bold;">Name : &#xb7; </span>
+            <input 
+                type="text" 
+                style="font-size: 20px; font-weight: 500; color: Black;" 
+                class="form-input text-muted" 
+                [style.width.ch]="username.length"
+                [(ngModel)]="username"
+            >
+            <span class="text-muted" style="font-size: 20px; font-weight: bold;"> &#xb7; </span>
+        
+        </div>
+        <div >
+            <fa-icon [icon]="marker" style="margin-right: 1rem;" size="1x"></fa-icon>
+            <input 
+                type="text" 
+                class="form-input" 
+                style="font-size: 16px; font-weight: 500; color: black; width: 500px;"
+                [(ngModel)]="address"
+            >
+        </div>
+        <div class="d-flex" style="align-items: baseline;">
+            <fa-icon [icon]="phoneIcon" style="margin-right: 1rem;" size="1x"></fa-icon>
+            <input 
+                type="text" 
+                class="form-input" 
+                style="font-size: 16px; font-weight: 500; color: black;"
+                [(ngModel)]="phone"
+            >
+        </div>
+        <h4 class="mt-2">{{ user.cartItems.length }} items in cart</h4>
+        <div class="mt-5">
+            <button 
+                class="btn btn-success" 
+                style="margin-right: 0.6rem;" 
+                (click)="updateUser()"
+            >Save</button>
+            <button class="btn btn-secondary mx-2" (click)="editMode = false">Cancel</button>
+        </div>
+    </div>
+</div>

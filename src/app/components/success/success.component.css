@@ -1,0 +1,64 @@
+body {
+    text-align: center;
+    padding: 80px 0;
+  } 
+
+  .row {
+    padding-top: 45px;
+  }
+    h1 {
+      color: #88B04B;
+      font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+      font-weight: 900;
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+  
+  i {
+    color: #9ABC66;
+    font-size: 100px;
+    line-height: 200px;
+    margin-left:-15px;
+  }
+
+  h1{
+    color: #f0f1f2;
+      font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+      font-size:25px;
+      margin: 5;
+  }
+
+  p{
+    color: #1e1d1d;
+      font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+      font-size:25px;
+      margin: 5;
+  }
+  .card {
+    background: rgb(77, 187, 87);
+    padding: 100px;
+    padding-top: 80px;
+
+    padding-left: 100px;
+    border-radius: 4px;
+    box-shadow: 0 2px 3px #3cf699;
+    margin: 0 auto;
+    border-radius: 25px;
+    box-shadow: rgba(97, 214, 105, 0.4) 0px 30px 90px;
+  }
+
+  .lik {
+    color: #ffcc00;
+    font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+    font-size:25px;
+    margin: 10;
+    font-weight: bold;
+  }
+
+  .money {
+    color: #000000;
+    font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+    font-size:25px;
+    margin: 10;
+    font-weight: bold;
+  }

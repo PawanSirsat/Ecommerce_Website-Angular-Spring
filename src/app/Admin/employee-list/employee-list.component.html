@@ -1,0 +1,44 @@
+<h2> Products List</h2>
+<nav class="navbar navbar-light bg-light">
+    <div class="container">
+      <form class="d-flex">
+        <br>
+
+        <input class="form-control me-lg-5"  type="text" name="name" [(ngModel)]="productFilter.name"
+        placeholder="Enter Name to Search" aria-label="Search">
+
+      </form>
+    </div>
+  </nav>
+  
+<table class = "table table-striped">
+    <thead>
+        <tr> 
+            <th (click)="sort('firstName')" mat-stroked-button>Id&nbsp;<i><mat-icon>swap_vert</mat-icon></i></th>
+            <th>ID</th>
+            <th> Product Name </th>
+            <th> Price</th>
+            <th> Brand </th>
+            <th> type </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let product of products | filterBy : productFilter" >
+            <td> {{ product.id }} </td>
+            <td> {{ product.name }} </td>
+            <td> {{ product.price }} </td>
+            <td> {{ product.brand }} </td>
+            <td> {{ product.type }} </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+

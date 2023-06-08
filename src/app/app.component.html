@@ -1,0 +1,162 @@
+
+<ngx-ui-loader type=""></ngx-ui-loader>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark col-12 px-5 mb-5 fixed-top">
+        <a class="navbar-brand" href="home">ShopApp</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent" >
+          <ul class="navbar-nav mr-auto" style="flex-grow: 1;">
+            <li class="nav-item">
+              <a class="nav-link active" routerLink="shop"><i class="fa fa-list"></i>&nbsp;Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" routerLink="accessories"><i class="fa fa-microchip"></i>&nbsp;PC Components</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" routerLink="gaming"><i class="fa fa-gamepad"></i>&nbsp;Gaming Zone</a>
+            </li>
+           
+            <form class="form-inline my-2 my-lg-0 d-flex" (submit)="search()">
+              <input 
+                  class="form-control mr-sm-2 bg-transparent text-success" 
+                  type="search" 
+                  placeholder="Search products" 
+                  aria-label="Search"
+                  [(ngModel)]="term"
+                  name="term"
+              >
+              <button class="btn btn-outline-success my-2 my-sm-0 mx-3" type="submit">Search</button>
+            </form>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact">Contact <i class="fa-solid fa-headphones-simple"></i> </a>
+            </li>
+          </ul>
+         
+          <ul class="navbar-nav mr-auto" style="flex-grow: 0;" >
+            <!-- <li *ngIf="!isTokenThere" class="nav-item" >
+              <a class="nav-link" routerLink="register">Register</a>
+            </li> -->
+            <li *ngIf="!isTokenThere" class="nav-item">
+                <a class="nav-link" routerLink="login"> <i class="fa fa-sign-in"></i> Login</a>
+            </li>
+            <li *ngIf="isTokenThere" class="nav-item">
+                <a class="nav-link" routerLink="account"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;Account</a>
+            </li>
+            <li *ngIf="isTokenThere" class="nav-item">
+                <a class="nav-link" routerLink="cart"><i class='fas fa-shopping-cart fa-lg'></i><div class="cart_value">{{ user.cartItems.length }}</div> 
+                </a>
+            </li>
+            <!-- <li *ngIf="isTokenThere" class="nav-item">
+              <a class="nav-link" routerLink="cart">Cart{{ user.cartItems.length }}<i class='fas fa-shopping-cart fa-lg'></i>
+              </a>
+          </li> -->
+            <!-- <li *ngIf="isTokenThere" class="nav-item">
+              <a class="nav-link"> <i class="fa fa-cart"></i> 5 {{ user.cartItems.length }}</a>
+          </li> -->
+            <li *ngIf="!isTokenThere" class="nav-item">
+              <a class="nav-link" routerLink="admin-login"><i class="fa fa-lock" aria-hidden="true"></i>&nbsp;Admin</a>
+          </li>
+          </ul>
+        </div>
+      </nav>
+</div>
+<div ngxUiLoaderBlurred blur="1">
+  
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+
+
+
+
+
+
+<!-- 
+<nav class="navbar navbar-dark navbar-expand-md fixed-top bg-dark">
+  <div class="container-fluid">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item active">
+          <a routerLink="" routerLinkActive="active" class="nav-link">Home</a>
+        </li>
+        <br>
+        <li class="nav-item">
+          <a class="nav-link" href="#"> </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"routerLink="product" routerLinkActive="active" >Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"> Contact <i class="fa-solid fa-headphones-simple"></i> </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mx-auto order-0">
+      <a class="navbar-brand mx-auto" >TechMart</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+      <ul class="navbar-nav ms-auto">
+        <div  *ngIf="loggedIn()" class="dropdown">
+          <li class="nav-item active" > 
+          <a class="nav-link"  id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa-solid fa-user-large"></i>  Welcome,  {{ name}} 
+             <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+
+          <div class="dropdown-menu dropdown-menu-sm"  >
+            <a class="dropdown-item " href="#">Dashboard</a>
+          <a class="dropdown-item" href="#">Change Password</a>
+          <a *ngIf="loggedIn()" routerLink="" routerLinkActive="active" class="dropdown-item"(click)="onlogout()">
+            <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+          </div>
+          </li>
+        </div>
+
+        <li class="nav-item active"*ngIf="loggedIn()" >
+            <a class="nav-link"  routerLink="cart" routerLinkActive="active">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <div class="cart_value">2</div> 2
+        </li>
+
+        <li class="nav-item-cart">
+          <a  *ngIf="!loggedIn()" routerLink="user-login" routerLinkActive="active" class="nav-link">
+            <i class="fa-solid fa-user-large"></i> Login</a>
+        </li>
+        
+          Example single danger button
+          
+        
+        <li class="nav-item">
+          <a *ngIf="loggedIn()" routerLink="" routerLinkActive="active" class="nav-link" (click)="onlogout()"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+        </li> 
+        <li class="nav-item">
+          <a *ngIf="!loggedIn()" routerLink="admin-login" routerLinkActive="active" class="nav-link">Admin 
+            <i class="fa-solid fa-lock"></i></a>
+        </li>
+      </ul>
+    </div>
+    
+  </div>
+</nav> -->
+</div>

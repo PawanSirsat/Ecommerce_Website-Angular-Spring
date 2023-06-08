@@ -1,0 +1,56 @@
+<div class="px-5 py-5">
+    <style>
+        .product-img-container {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url("../../../assets/static/images/product-placeholder.png");
+            height: 500px;
+            width: 500px;
+        }
+    </style>
+    <div class="d-flex m-5">
+        <img class="card-img-top" src={{product.url}}>
+        <div 
+            *ngIf="product != undefined"
+            class="col-6 rounded px-5 pt-5 pb-3" 
+            style="border: 1px solid white;"
+        >
+        <div class="col-md-6" >  
+            <h2>{{product.name}}</h2>
+            <h2>{{product.price | currency:"₹"}}</h2>
+            
+            <div class="d-flex mt-5" style="justify-content: space-between; align-items: center;"> 
+                <button 
+                    *ngIf="!isProductInCart" 
+                    class="btn btn-success" 
+                    [disabled]="!user" 
+                    (click)="addToCart()"
+                >Add to cart</button>
+                <button *ngIf="isProductInCart" class="btn btn-secondary" disabled>In cart</button>
+            </div>
+            
+            <ul>
+                <li>{{product.brand}}</li>
+                <li>{{product.ram}} GB RAM</li>
+                <li>{{product.hdd}} GB HDD</li>
+                <li>Microsoft Office & Student 2021</li>
+                <li>Screen Size : {{product.screen}} inches</li>
+                <li>{{product.type}}</li>
+                <li>2 Years Warranty</li>
+              </ul>  
+              
+            
+       </div>
+            <p class="text-muted">Added on {{ product.addedOn | date: 'MMM d'}}</p>
+            <h3>{{product.description}}</h3>
+            
+        </div>
+        <h1 
+            *ngIf="product == undefined"
+            class="mx-auto" 
+            style="text-align: center; margin-top: 10rem;"
+        >Product not found</h1>
+    </div>
+  
+</div>

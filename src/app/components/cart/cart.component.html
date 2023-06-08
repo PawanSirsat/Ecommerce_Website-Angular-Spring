@@ -1,0 +1,119 @@
+
+<div class="row">
+    <div class="col-lg-6 p-4">
+  <div class="pawan" >
+    <div class="Cart-Container" >
+        <div class="Header">
+            <h3 class="Heading">Shopping Cart</h3>
+            <!-- <h3 class="mt-2">{{ user.cartItems.length }} Product in cart</h3> -->
+
+            <h5 class="Action">Remove all</h5>
+            </div>
+            <div class="Cart-Items" *ngFor="let item of cartItems; let i = index">
+                <div class="image-box">
+                        <img class="card-img-top" src={{item.product.url}}>  
+                        <div class="counter">
+
+                        <div class="btn">
+                              <i class="fa fa-plus" aria-hidden="true"  (click)="increaseQuantity(item)"></i>     
+                        </div>
+
+                      <div class="count">{{ item.quantity }}</div>
+                          <div class="btn"> 
+                              <i class="fa fa-minus" aria-hidden="true"  (click)="decreaseQuantity(item)"></i>
+                          </div>
+                      </div>
+
+                </div>
+
+                <div class="about" >
+                <h2 class="title">{{item.product.name}}</h2>
+                <!-- <h3 class="subtitle">Id {{product.id}}</h3> -->
+                <!-- <img src="images/veg.png" height="30px" /> -->
+                </div>
+                
+                    <div class="prices">
+                        <div class="amount">₹{{item.product.price | number: '1.2-2'}}</div>
+                        <div class="save"><u>Save for later</u></div>
+                        <div class="remove"><u>Remove</u></div>
+                    </div>
+                        
+                </div>        
+                <hr> 
+ </div>
+ 
+</div>
+</div>
+
+<div class="col-lg-4 p-2">
+    <br>
+        <div>
+            
+            <!-- <input 
+                type="text" 
+                class="form-input" 
+                [(ngModel)]="address">
+            <input 
+                type="text" 
+                class="form-input" 
+                [(ngModel)]="phone">
+    
+            <button class="btn btn-success" (click)="updateUser()">Continue</button> -->
+
+    <div class="checkout">
+       
+  
+        <div class="form-floating mb-3" style=" font-family: 'Trebuchet MS', sans-serif;">
+            <input type="text" class="form-control"
+             id="name" name="name"
+              placeholder="Name"
+              [(ngModel)]="name"
+              style="width: 250px;">
+            
+            <label for="floatingPassword">Name</label>
+          </div>
+
+          <div class="form-floating mb-3"style=" font-family: 'Trebuchet MS', sans-serif;" >
+            <input type="text" class="form-control"
+             id="phone" name="phone"
+              placeholder="Phone"
+              [(ngModel)]="phone"
+              style="width: 250px;">
+            
+            <label for="floatingPassword">Phone</label>
+          </div>
+          <div class="form-floating mb-3" style=" font-family: 'Trebuchet MS', sans-serif;">
+            <textarea  type="text" class="form-control"
+             id="address" name="address"
+              placeholder="Address"
+              [(ngModel)]="address"
+              style="width: 350px;"
+              rows="5">
+            </textarea>
+            
+            <label for="floatingPassword">Address</label>
+          </div>
+
+        <h2 style=" font-family: 'Trebuchet MS', sans-serif;">Price Details</h2>
+    
+        <div class="total">
+        <div>
+        <div class="Subtotal">Sub-Total({{user.cartItems.length}})items</div>
+        <div class="save"><u>Delivery Charge : Free</u></div>
+        <div class="save"><u>  Packaging Charge : Free</u></div>
+      
+        <br>
+        <div class="total-amount">{{getTotal() | currency:"₹"}}
+          </div>
+            <br>
+            <div class="form-text text" style="color:green " >
+                <b> You Save your 20% </b>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+        <button class="button" *ngIf="cartItems" (click)="updateUser()">Save & Continue</button>
+        </div>
+</div>
+</div>

@@ -1,0 +1,131 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+mat-drawer {
+  width: 170px;
+}
+mat-drawer-container {
+  height: 620px;
+  width: 1300px;
+  top: 60px;
+  
+  border-radius: 20px;
+  box-shadow: rgba(29, 37, 89, 0.35) 0px 5px 15px;
+}
+
+mat-drawer {
+  background: #0f172a;
+}
+
+body {
+  background: #007bff;
+  background: linear-gradient(to right, #0062E6, #33AEFF);
+
+}
+
+
+.host 
+    .mat-icon {
+      vertical-align: middle;
+      margin-right: 2rem;
+    }
+  
+  .logo{
+    text-align: center;
+    padding: 2rem 2rem;
+    color: #94a3b8;
+  }
+
+  
+  .mat-divider {
+    border-top-width: 4px;
+    border-color: white;
+  }
+
+  .mat-list-item {
+    color: #94a3b8 !important;
+    font-size: 0.95rem;
+    height: 55px !important;
+    margin-bottom: 4px;
+  }
+    .hover {
+      color: #318bc7 !important;
+    }
+    .ng-deep 
+      .mat-list-item-content {
+        border-radius: 5px;
+        margin: 0 8px;
+      }
+      .hover {
+          background: #2c3344 !important;
+        }
+      
+  .list-item-active {
+     background: blue !important;
+     border-radius: 0 2rem 2rem 0;
+  }
+  .hover {
+       background: blue;
+       color: #f2f5f7 !important;
+ }
+  
+    
+    .ng-deep 
+      .mat-list-item-content 
+      {
+        background: #2c3344 !important;
+      }
+        .hover 
+        {
+          background: #2c3344 !important;
+        }
+      
+    
+  
+  .mat-subheader {
+    color: #818cf8;
+    font-size: 0.6rem;
+    font-weight: 100;
+    letter-spacing: 1px;
+  }
+
+  .mat-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  ul {
+      list-style: none;
+
+  }
+  button {
+    outline: none;
+    border: 0;
+    background: transparent;
+  }
+  .user {
+    font-size: 14px;
+  }
+  mat-toolbar {
+    background: #a76bf0;
+  }
+  .user-image {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+    .icon {
+      height: 18px;
+      font-size: 16px;
+    }
+  
+  
+  .ng-deep 
+    .mat-menu-content {
+      width: 160px;
+    }
+  

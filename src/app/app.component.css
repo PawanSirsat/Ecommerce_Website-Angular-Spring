@@ -1,0 +1,10 @@
+ .cart_value{
+    position: absolute;
+    top: 3px;
+    right: 35px;
+    background:rgb(15, 219, 90);
+    border: 1px solid rgb(5, 105, 24);
+    border-radius: 50%;
+    padding :0px 7px;
+    color : black;
+  }

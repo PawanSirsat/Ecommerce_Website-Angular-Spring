@@ -1,0 +1,256 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-10 col-lg-9 mx-auto">
+        <div class="card border-1 shadow rounded-5 my-3">
+          <div class="card-body p-8 p-sm-5">
+            <div class="form-floating mb-3">
+              <!-- Form Name -->
+              <h2 class="text-center mb-4">Add Product</h2>
+              <form class="form-horizontal" (ngSubmit)="addProduct()">
+
+                <!-- Text input-->
+                <div class="row justify-content-between text-lef">
+  
+                  <div class="form-group col-sm-6 flex-column d-flex">
+                    <label class="form-control-label px-2.5" for="name">Product Name</label>
+                    <input id="name" name="name" placeholder="" class="form-control input-md" required=""
+                      type="text" [(ngModel)]="product.name">
+                  </div>
+  
+                  <!-- Short Discription -->
+                  <div class="form-group col-sm-6 flex-column d-flex">
+                      <label class="form-control-label px-2.5" for="description">Product Discription Short</label>
+                      <input id="description" name="description" placeholder="" class="form-control input-md" required=""
+                      type="text" [(ngModel)]="product.description">
+                  </div>
+  
+                </div>
+
+                <div class="row justify-content-between text-lef">
+  
+                  <div class="form-group col-sm-6 flex-column d-flex">
+                    <label class="form-control-label px-2.5" for="screen">Screen Size</label>
+                    <input id="screen" name="screen" placeholder="" class="form-control input-md" required=""
+                      type="text" [(ngModel)]="product.screen">
+                      <div class="form-text text-black">
+                      15 inch / 18 inch
+                      </div>
+                  </div>
+  
+                  <!-- Short Discription -->
+                  <div class="form-group col-sm-6 flex-column d-flex">
+                      <label class="form-control-label px-2.5" for="ram">RAM</label>
+                      <input id="ram" name="ram" placeholder="" class="form-control input-md" required=""
+                      type="text" [(ngModel)]="product.ram">
+                  </div>
+                  <div class="form-text text-black">
+                     8 GB / 16 GB / 32 GB
+                  </div>
+                </div>
+
+                <div class="row justify-content-between text-lef">
+  
+                  <div class="form-group col-sm-6 flex-column d-flex">
+                    <label class="form-control-label px-2.5" for="hdd">HDD</label>
+                    <input id="hdd" name="hdd" placeholder="" class="form-control input-md" required=""
+                      type="text" [(ngModel)]="product.hdd">
+                      <div class="form-text text-black">
+                        250 GB/ 500 GB / 1 TB
+                      </div>
+                  </div>
+  
+                  <!-- Short Discription -->
+                  <div class="form-group col-sm-6 flex-column d-flex">
+                      <label class="form-control-label px-2.5" for="type">Type</label>
+                      <input id="type" name="type" placeholder="" class="form-control input-md" required=""
+                      type="text" [(ngModel)]="product.type">
+                  </div>
+                  <div class="form-text text-black">
+                   Office/Gaming/Professional
+                  </div>
+                </div>
+  
+  
+                <!-- Select Basic -->
+                <div class="row justify-content-between text-lef">
+  
+                  <div class="form-group col-sm-6 flex-column d-flex">
+                    <label class="form-control-label px-3" for="brand">Brand</label>
+                    <input id="brand" name="brand" placeholder="" class="form-control input-md" type="text"
+                    [(ngModel)]="product.brand">
+                      <div class="form-text text-black">
+                        Brand Samsung/Dell/HP/Acer
+                      </div>
+                  </div>
+  
+                  <div class="form-group col-sm-6 flex-column d-flex">
+                  
+                    <label class="form-control-label px-3" for="price">Price</label>
+                    <input id="price" name="price" placeholder="" class="form-control input-md" type="text"
+                    [(ngModel)]="product.price">
+                      <div class="form-text text-black">
+                        Price
+                      </div>
+                  </div>
+                </div>
+
+                <div class="form-group col-sm-6 flex-column d-flex">
+                  <label class="form-control-label px-3" for="url">Product Image URL</label>
+                  <input id="url" name="url" placeholder="" class="form-control input-md" type="text"
+                  [(ngModel)]="product.url">
+                    <div class="form-text text-black">
+                      Image Url
+                    </div>
+                </div>
+              <!-- <form #productForm="ngForm" (ngsubmit)="addProduct()">
+
+                <div class="row justify-content-between text-lef">
+
+                    <div class="form-group col-sm-6 flex-column d-flex">
+                      <label class="form-control-label px-2.5" for="productName"></label>
+                      <input id="productName" name="productName" placeholder="ProductName" class="form-control input-md" required
+                        type="text" [ngModel]="product.productName" minlength="5" #productName="ngModel">
+                        <div class="form-text text-black">
+                            Must 10 Char
+                          </div>
+                      <div class="form-text text-danger"
+                        *ngIf="productName.errors?.minlength">
+                        ProductName is invalid (Must 5 Char)
+                      </div>
+                    </div> -->
+
+
+                     <!-- Short Discription -->
+                <!-- <div class="form-group col-sm-6 flex-column d-flex">
+                    <label class="form-control-label px-2.5" for="description"></label>
+                    <input id="description" name="description" placeholder="Product Discription Short" class="form-control input-md" required=""
+                    type="text" [ngModel]="product.description" minlength="10" #description="ngModel">
+                    <div class="form-text text-black">
+                        Must 10 Words
+                      </div>
+                    <div class="form-text text-danger"
+                    *ngIf="description.errors?.minlength&&(description.touched || description.dirty)">
+                    Product Discription must be 10 Words
+                     </div>
+                </div>
+
+              </div> -->
+
+              <!-- Select Basic -->
+              <!-- <div class="row justify-content-between text-lef"> -->
+
+                <!-- <div class="form-group col-sm-6 flex-column d-flex">
+                  <label class="form-control-label px-3" for="url"></label>
+                  <input id="url" name="url" placeholder="Product Category" class="form-control input-md" type="text"
+                  [ngModel]="product.url" #url="ngModel">
+                    <div class="form-text text-black">
+                      Laptop/Desktop/CPU
+                    </div>
+                  <div class="form-text text-danger"
+                    *ngIf="url.errors?.required">
+                    category Name is required
+                  </div>
+                </div> -->
+
+                <!-- <div class="form-group col-sm-6 flex-column d-flex">
+                
+                  <label class="form-control-label px-3" for="type"></label>
+                  <input id="type" name="type" placeholder="Type of Product" class="form-control input-md" type="text"
+                  [ngModel]="product.type"  #type="ngModel" >
+                    <div class="form-text text-black">
+                      Office/Personal/Gaming
+                    </div>
+                  <div class="form-text text-danger"
+                    *ngIf="type.errors?.required">
+                    type is required
+                  </div>
+                </div> -->
+
+                <!-- <div class="form-group col-sm-6 flex-column d-flex">
+                  <label class="form-control-label px-3" for="brand"></label>
+                  <input id="brand" name="brand" placeholder="Type of Brand" class="form-control input-md" type="text"
+                  [ngModel]="product.brand"  #brand="ngModel">
+                    <div class="form-text text-black">
+                      Apple/Dell/HP/ASUS
+                    </div>
+                  <div class="form-text text-danger"
+                    *ngIf="brand.errors?.required">
+                    brand is required
+                  </div>
+                </div> -->
+<!-- 
+                <div class="form-group col-sm-6 flex-column d-flex">
+                  <label class="form-control-label px-3" for="ram"></label>
+                  <input id="ram" name="ram" placeholder="Ram Size (GB)" class="form-control input-md" type="text"
+                    >
+                    <div class="form-text text-black">
+                      8/16/32
+                    </div>
+    
+                </div> -->
+<!-- 
+                <div class="form-group col-sm-6 flex-column d-flex">
+                  <label class="form-control-label px-3" for="hdd"></label>
+                  <input id="hdd" name="hdd" placeholder="HDD Size (GB)" class="form-control input-md" type="text"
+                    >
+                    <div class="form-text text-black">
+                      500/1000/2000
+                    </div>
+                
+                </div> -->
+
+                <!-- <div class="form-group col-sm-6 flex-column d-flex">
+                  <label class="form-control-label px-3" for="price"></label>
+                  <input id="price" name="price" placeholder="Product Price" class="form-control input-md" type="text" >
+                
+                </div>
+
+              </div>  -->
+
+          <!-- Text input-->
+
+
+
+          <div class="row justify-content-between text-lef">
+
+            <!-- <div class="form-group col-sm-6 flex-column d-flex">
+              <label class="form-control-label px-3" for="quantity"></label>
+              <input id="quantity" name="quantity" placeholder="AVAILABLE QUANTITY" class="form-control input-md" type="text"
+                >
+             
+            </div>
+
+            <div class="form-group col-sm-6 flex-column d-flex">
+              <label class="form-control-label px-3" for="product"></label>
+              <textarea class="form-control" id="descriptionLong" name="descriptionLong" placeholder="PRODUCT DESCRIPTION LONG"
+               ></textarea>
+            
+            </div> -->
+          
+
+
+          <!-- <div class="form-group col-sm-6 flex-column d-flex">
+
+            <label class="form-control-label px-2.5" for="description"></label>
+            <input id="productImgUrl" name="productImgUrl" placeholder="productImgUrl" class="form-control input-md" type="text" >
+          </div>
+        </div> -->
+
+    
+            <!-- File Button -->
+    <hr>
+    <div class="row justify-content-between text-lef">
+      <div class="form-group col-sm-6 flex-column d-flex">
+        <button id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit"
+          >Save Product</button>
+      </div>
+    </div>
+          </div>
+            </form>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>

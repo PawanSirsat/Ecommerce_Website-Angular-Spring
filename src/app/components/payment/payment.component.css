@@ -1,0 +1,302 @@
+
+   :host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .row {
+    padding-top: 45px;
+  }
+  .pawan {
+    height: inherit;
+    width: 850px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+   }
+    
+   .Header{
+    margin: auto;
+    width: 90%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+   .Heading{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    color: #2F3841;
+   }
+   .Action{
+    font-size: 14px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    color: #E44C4C;
+    cursor: pointer;
+    border-bottom: 1px solid #E44C4C;
+   }
+
+   .Cart-Items{
+    margin: auto;
+    width: 90%;
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+   .image-box{
+    width: 23%;
+    text-align: left;
+   }
+   .about{
+    float: left;
+    text-align: left;
+   }
+   .title{
+    padding-top: 5px;
+    text-align: left;
+    line-height: 5px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+   
+    color: #202020;
+   }
+   .subtitle{
+    line-height: 10px;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    color: #909090;
+   }
+
+   .counter{
+    width: 23%;
+    display: flex;
+    margin-left: 30px;
+    justify-content: space-between;
+    align-items: center;
+   }
+   .btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+    color: #202020;
+    cursor: pointer;
+   }
+   .count{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+    color: #202020;
+   }
+
+   .prices{
+    height: 100%;
+    text-align: right;
+   }
+   .amount{
+    padding-top: 20px;
+    font-size: 26px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: 800;
+    color: #202020;
+   }
+   .save{
+    padding-top: 5px;
+    font-size: 14px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    color: #1687d9;
+    cursor: pointer;
+   }
+   .remove{
+    padding-top: 5px;
+    font-size: 14px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    color: #E44C4C;
+    cursor: pointer;
+   }
+
+   hr{
+    width: 66%;
+    float: right;
+    margin-right: 5%;
+   }
+   .checkout{
+    float: right;
+    margin-right: 5%;
+    width: 28%;
+   }
+   .total{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+   }
+   .Subtotal{
+    font-size: 22px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    color: #202020;
+   }
+   .items{
+    font-size: 16px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    color: #909090;
+    line-height: 10px;
+   }
+   .total-amount{
+    font-size: 36px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+    color: #202020;
+   }
+   .button{
+    margin-top: 5px;
+    width: 300px;
+    height: 40px;
+    border: none;
+    background: linear-gradient(to bottom right, #b3efc6, #52c166);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    color: #202020;
+   }
+
+   .order{
+    margin-top: 5px;
+    width: 300px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    color: #00a6ff;
+   }
+   .image {
+    width: 60px;
+    height: 30px;
+}
+
+body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: #EF5350;
+    background-repeat: no-repeat;
+}
+
+.card {
+    padding: 30px 25px 35px 50px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 8px 0px #B71C1C;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.border-line {
+    border-right: 1px solid #BDBDBD;
+}
+
+.text-sm {
+    font-size: 13px;
+}
+
+.text-md {
+    font-size: 18px;
+}
+
+.image {
+    width: 60px;
+    height: 30px;
+}
+
+::placeholder {
+    color: grey;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: grey;
+}
+
+::-ms-input-placeholder {
+    color: grey;
+}
+
+input {
+    padding: 2px 0px;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    box-sizing: border-box;
+    color: #000;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+input:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid #EF5350;
+    outline-width: 0;
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0;
+}
+
+.btn-red {
+    background-color: #EF5350;
+    color: #fff;
+    padding: 8px 25px;
+    border-radius: 50px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    border: 2px solid #fff;
+}
+
+.btn-red:hover {
+    box-shadow: 0 0 0 2px #EF5350;
+}
+
+.btn-red:focus {
+    box-shadow: 0 0 0 2px #EF5350 !important;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #EF5350;
+}
+
+@media screen and (max-width: 575px) {
+    .border-line {
+        border-right: none;
+        border-bottom: 1px solid #EEEEEE;
+    }
+}
+   
+
+  

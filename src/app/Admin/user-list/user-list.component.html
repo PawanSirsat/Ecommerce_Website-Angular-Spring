@@ -1,0 +1,67 @@
+<h2> User List</h2>
+<nav class="navbar navbar-light bg-light">
+    <div class="container">
+      <form class="d-flex">
+        <button class="btn btn-outline-success" type="submit" style="  padding: 2px 20px; display: inline-block;  margin: 4px 2px;"><mat-icon>search</mat-icon></button>
+        <br>
+
+        <input class="form-control me-lg-5"  type="text" name="name" [(ngModel)]="name" (ngModelChange)="Search()"
+        placeholder="Enter Name to Search" aria-label="Search">
+
+      </form>
+    </div>
+  </nav>
+  
+<table class = "table table-striped">
+    <thead>
+        <tr> <th>ID</th>
+            <th (click)="sort('firstName')" mat-stroked-button>Name&nbsp;<i><mat-icon>swap_vert</mat-icon></i></th>
+            <th> Email Id </th>
+            <th> Phone Number</th>
+            <th> Address </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let user of users " >
+            <td>{{user.id}}</td>
+            <td> {{ user.username }} </td>
+            <td> {{ user.email }} </td>
+            <td> {{ user.phone }} </td>
+            <td> {{ user.address }} </td>
+            <!-- <td>
+                <button (click) = "updateEmployee(employee.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteEmployee(employee.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "employeeDetails(employee.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td> -->
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+<!-- <mat-nav-list>
+     
+    <div class="logo py-2">
+      <img src="https://cdn-icons-png.flaticon.com/512/7153/7153080.png" alt="Admin" width="70" height="65" />
+      <h3>Admin</h3>
+    </div>
+    <mat-divider></mat-divider>
+    <h1 matSubheader class="mt-lg-2">APPLICATIONS</h1>
+  
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/home">
+      <mat-icon>dashboard</mat-icon> Add Products
+    </a>
+    <a routerLink="user-edit" routerLinkActive="active" class="nav-link">User-edit</a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="user-Edit"> <mat-icon>edit</mat-icon> Edit Products</a>
+    <a mat-list-item> <mat-icon>edit</mat-icon> Employee Details </a>
+    <a mat-list-item> <mat-icon>edit</mat-icon> Edit Employee </a>
+    <a mat-list-item> <mat-icon>edit</mat-icon> User details </a>
+    <a mat-list-item> <mat-icon>edit</mat-icon> Link </a>
+  </mat-nav-list> -->
